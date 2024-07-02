@@ -22,4 +22,5 @@ app.post("/login", (req, res) => {
 
   //jwt를 이용하여 클라이언트에게 보내줄 access 토큰 생성하기
   const accessToken = jwt.sign(user, sercretText);
+  res.json({ acessToken: acessToken });
 });
